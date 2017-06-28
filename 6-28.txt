@@ -1,3 +1,0 @@
-配置redis环境
-配置mongodb环境
-学习基本的redis操作
