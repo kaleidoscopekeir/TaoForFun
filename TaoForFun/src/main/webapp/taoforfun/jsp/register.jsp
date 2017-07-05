@@ -12,6 +12,20 @@
 <link href="<%=path%>/taoforfun/css/home.css" rel="stylesheet">
 </head>
 <body>
+
+<div class="topbar">
+<div class="topbody">
+<h2 class="title">Tao For Fun!</h2>
+<ul class="toplist">
+	<li><form id="search">
+		<input type="text" name="search" placeholder="search something"/>
+		<input type="submit" value="Search"/>
+	</form></li>
+	<li><a href="*" class="active">  Log in</a></li>
+</ul>
+</div>
+</div>
+
 <h2>Input your information to join us!</h2>
 
 <div id="signinform">

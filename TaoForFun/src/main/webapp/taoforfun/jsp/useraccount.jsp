@@ -12,8 +12,21 @@
 <link href="<%=path%>/taoforfun/css/user.css" rel="stylesheet">
 </head>
 <body>
+<div class="topbar">
+<div class="topbody">
+<h2 class="title">Tao For Fun!</h2>
+<ul class="toplist">
+	<li><form id="search">
+		<input type="text" name="search" placeholder="search something"/>
+		<input type="submit" value="Search"/>
+	</form></li>
+	<li><a href="getAllWeibosPro" class="active">Weibos  </a></li>
+	<li><a href="getUserHomePro" class="active">  Me</a></li>
+</ul>
+</div>
+</div>
 
-<div id="nav">
+<div class="nav">
 	<img src="<%=path%>/taoforfun/img/testGIF.gif" alt="testGIF" style="width:100px;height:100px;"/>
 	<ul>
 		<li>UserName</li>
@@ -25,13 +38,14 @@
 	</ul>
 </div>
 
-<div id="section">	
+<div class="section">	
 	<form action="" method="get">
 		<p>Old Password<input type="password" name="password"/></p>
 		<p>New Password<input type="password" name="newpassword"/></p>
 		<p>Confirm New Password<input type="password" name="newpassword"/></p>
 		<p><input type="submit" value="Change Password"/>
 	</form>
+	
 	<a href="">forget the old password</a>
 	
 	<form action="" method="get">

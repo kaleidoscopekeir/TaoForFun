@@ -9,29 +9,47 @@
 <%
 	String path = request.getContextPath();
 %>
-
+<link href="<%=path%>/taoforfun/css/user.css" rel="stylesheet">
 </head>
 <body>
-<img src="<%=path%>/taoforfun/img/testGIF.gif" alt="testGIF" style="width:100px;height:100px;"/>
-<img src="<%=path%>/taoforfun/img/testPNG.png" alt="testPNG" style="width:100px;height:100px;"/>
-<img src="<%=path%>/taoforfun/img/testJPG.jpg" alt="testJPG" style="width:100px;height:100px;"/>
-<ul>
-<li>UserName</li>
-<li><a href="getUserHomePro" class="active">Home</a></li>
-<li><a href="getUserProfilePro" class="active">Profile</a></li>
-<li><a href="getUserAccountPro" class="active">Account</a></li>
-<li><a href="getUserPermissionPro" class="active">Permissions</a></li>
-<li><a href="logoutPro" class="active">Log out</a></li>
-</ul>
 
-<form action="" method="get">
-		<p>Name<input type="text" name="username"/></p>
-		<p>Age<input type="text" name="age"/></p>
-		<p>City<input type="text" name="city"/></p>
-		<p>Email<input type="text" name="email"/></p>
-		<p>Introduction<input type="text" name="intro"/></p>
-		<input type="submit" value="Update"/>
+<div class="topbar">
+<div class="topbody">
+<h2 class="title">Tao For Fun!</h2>
+<ul class="toplist">
+	<li><form id="search">
+		<input type="text" name="search" placeholder="search something"/>
+		<input type="submit" value="Search"/>
+	</form></li>
+	<li><a href="getAllWeibosPro" class="active">Weibos  </a></li>
+	<li><a href="getUserHomePro" class="active">  Me</a></li>
+</ul>
+</div>
+</div>
+
+<div class="nav">
+<img src="<%=path%>/taoforfun/img/testGIF.gif" alt="testGIF" style="width:100px;height:100px;"/>
+<ul>
+	<li>UserName</li>
+	<li><a href="getUserHomePro" class="active">Home</a></li>
+	<li><a href="getUserProfilePro" class="active">Profile</a></li>
+	<li><a href="getUserAccountPro" class="active">Account</a></li>
+	<li><a href="getUserPermissionPro" class="active">Permissions</a></li>
+	<li><a href="logoutPro" class="active">Log out</a></li>
+</ul>
+</div>
+
+<div class="section">
+<ul>
+	<li>Account level:</li>
+	<li>Athority level:</li>
+	<li>
+	<form>
+		<p>Password:</p><input type="text" name="password"/>
+		<input type="submit" value="Change Athority"/>
 	</form>
+</ul>
+</div>
 
 </body>
 </html>
