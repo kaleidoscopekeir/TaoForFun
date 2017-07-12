@@ -1,0 +1,79 @@
+drop database if exists TaoForFun;
+
+create database TaoForFun;
+
+use TaoForFun;
+
+create table if not exists `User`(
+  
+ `userid` int unsigned auto_increment primary key not Null,
+  
+ `username` varchar(50) not Null unique,
+  
+ `password` int unsigned not Null unique,
+ 
+ `email` varchar(50),
+ 
+ `role` varchar(10) not Null
+
+);
+
+
+create table if not exists `weibo`(
+ 
+ `weiboid` int unsigned auto_increment primary key not Null,
+ 
+ `adder` varchar(50) not Null,
+ 
+ `content` varchar(100) not Null, 
+ `time` timestamp not Null£¬
+foreign key(adder) references user(username) on delete cascade
+ 
+ );
+
+
+
+create table if not exists `comment`(
+  
+ `commentid` int unsigned auto_increment primary key not Null,
+  
+ `weiboid` int unsigned not Null,
+ 
+ `adder` char,
+  
+ `content` char,
+ 
+ `time` timestamp not Null,
+
+  foreign key(weiboid) references weibo(weiboid) on delete cascade
+
+);
+
+
+create table if not exists `friendapplication`(
+
+ `pairid` int unsigned auto_increment primary key not Null,
+
+ `username1` varchar(50) not Null,
+   
+ `username2` varchar(50) not Null£¬
+
+  foreign key(username1) references user(username) on delete cascade,
+ 
+  foreign key(username2) references user(username) on delete cascade
+);
+ 
+
+
+create table if not exists `friendpair`(
+   
+ `pairid` int unsigned auto_increment primary key not Null,
+  
+ `username1` varchar(50) not Null,
+   
+ `username2` varchar(50) not Null
+£¬
+  foreign key(username1) references user(username) on delete cascade,
+
+  foreign key(username2) references user(username) on delete cascade
+);
